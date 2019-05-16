@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.1/css/bootstrap-slider.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header-block">
+  <div class="container">
+    <div class="header__row">
+      <div class="header__logo">
+        <img src="images/logo.png" alt="Логотип">
+      </div>
+      <div class="header__mark">
+        <img src="images/stamp.png" alt="Секретно">
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <section class="profile-section">
+      <h1 class="profile__title">
+        <span class="visually-hidden">Дело</span>
+        <img src="images/title.png" alt="Дело">
+      </h1>
+      <form action="/" class="profile__form">
+        <div class="field-group">
+          <label class="field__label">
+            <span class="field__label-text">Полное ФИО</span>
+            <input class="field__input" type="text" name="name" value="Миежелис Светлана Алексеевна">
+          </label>
+          <label class="field__label">
+            <span class="field__label-text">Год рождения</span>
+            <input class="field__input" type="text" name="year" value="1990">
+          </label>
+          <label class="field__label">
+            <span class="field__label-text">Место жительства</span>
+            <input class="field__input" type="text" name="location" value="г. Нижний Новгород, Россия">
+          </label>
+          <label class="field__label">
+            <span class="field__label-text">Скайп</span>
+            <input class="field__input" type="text" name="skype" value="fleur-kazama">
+          </label>
+          <label class="field__label">
+            <span class="field__label-text">Почта</span>
+            <input class="field__input" type="email" name="email" value="fleurkazama@gmail.com">
+          </label>
+        </div>
+        <div class="field-group">
+          <h2>Расскажите о себе чекбоксами</h2>
+          <p class="field__text">
+            Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает,
+            что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи,
+            с которыми гарантировано будете справляться.
+          </p>
+          <div class="field__group-row field__group-row--checkboxes-row">
+            <div class="field__check-col">
+              <label class="field__check-label" tabindex="0">
+                <input type="checkbox" name="metodology" class="field__check-input" checked="">
+                <span class="field__check-indicator"></span>
+                <span class="field__check-text">БЭМ/OOCSS</span>
+              </label>
+              <label class="field__check-label" tabindex="0">
+                <input type="checkbox" name="pug (jade)" class="field__check-input">
+                <span class="field__check-indicator"></span>
+                <span class="field__check-text">Pug (Jade)</span>
+              </label>
+              <label class="field__check-label" tabindex="0">
+                <input type="checkbox" name="stylus/less/sass" class="field__check-input" checked="">
+                <span class="field__check-indicator"></span>
+                <span class="field__check-text">Stylus/LESS/SASS</span>
+              </label>
+              <label class="field__check-label" tabindex="0">
+                <input type="checkbox" name="svg" class="field__check-input" checked="">
+                <span class="field__check-indicator"></span>
+                <span class="field__check-text">Работаю с SVG</span>
+              </label>
+              <label class="field__check-label" tabindex="0">
+                <input type="checkbox" name="semantic" class="field__check-input" checked="">
+                <span class="field__check-indicator"></span>
+                <span class="field__check-text">Верстаю семантично</span>
+              </label>
+              <label class="field__check-label" tabindex="0">
+                <input type="checkbox" name="a11y" class="field__check-input" checked="">
+                <span class="field__check-indicator"></span>
+                <span class="field__check-text">Accessibility (A11Y)</span>
+              </label>
+              <label class="field__check-label" tabindex="0">
+                <input type="checkbox" name="js" class="field__check-input">
+                <span class="field__check-indicator"></span>
+                <span class="field__check-text">ES2015/ES2016</span>
+              </label>
+            </div>
+            <div class="field__check-col">
+              <label class="field__check-label" tabindex="0">
+                <input type="checkbox" name="gulp/grunt" class="field__check-input" checked="">
+                <span class="field__check-indicator"></span>
+                <span class="field__check-text">Gulp/GRUNT</span>
+              </label>
+              <label class="field__check-label" tabindex="0">
+                <input type="checkbox" name="webpack" class="field__check-input" checked="">
+                <span class="field__check-indicator"></span>
+                <span class="field__check-text">Webpack</span>
+              </label>
+              <label class="field__check-label" tabindex="0">
+                <input type="checkbox" name="gl" class="field__check-input">
+                <span class="field__check-indicator"></span>
+                <span class="field__check-text">Дружу с WebGL</span>
+              </label>
+              <label class="field__check-label" tabindex="0">
+                <input type="checkbox" name="jquery" class="field__check-input" checked="">
+                <span class="field__check-indicator"></span>
+                <span class="field__check-text">jQuery</span>
+              </label>
+              <label class="field__check-label" tabindex="0">
+                <input type="checkbox" name="angular" class="field__check-input">
+                <span class="field__check-indicator"></span>
+                <span class="field__check-text">Знаю/изучаю Angular</span>
+              </label>
+              <label class="field__check-label" tabindex="0">
+                <input type="checkbox" name="react" class="field__check-input">
+                <span class="field__check-indicator"></span>
+                <span class="field__check-text">Знаю/изучаю React</span>
+              </label>
+              <label class="field__check-label" tabindex="0">
+                <input type="checkbox" name="node.js" class="field__check-input">
+                <span class="field__check-indicator"></span>
+                <span class="field__check-text">Знаю/изучаю Node.js</span>
+              </label>
+            </div>
+            <div class="field__check-col">
+              <label class="field__check-label" tabindex="0">
+                <input type="checkbox" name="git" class="field__check-input" checked="">
+                <span class="field__check-indicator"></span>
+                <span class="field__check-text">Использую Git</span>
+              </label>
+              <label class="field__check-label" tabindex="0">
+                <input type="checkbox" name="eye" class="field__check-input" checked="">
+                <span class="field__check-indicator"></span>
+                <span class="field__check-text">С глазомером всё ок</span>
+              </label>
+              <label class="field__check-label" tabindex="0">
+                <input type="checkbox" name="blog" class="field__check-input">
+                <span class="field__check-indicator"></span>
+                <span class="field__check-text">Читаю <a href="http://blog.csssr.ru/">blog.csssr.ru</a></span>
+              </label>
+              <label class="field__check-label" tabindex="0">
+                <input type="checkbox" name="lazy" class="field__check-input">
+                <span class="field__check-indicator"></span>
+                <span class="field__check-text">Я ленивый(-ая)</span>
+              </label>
+              <label class="field__check-label" tabindex="0">
+                <input type="checkbox" name="english" class="field__check-input" checked="">
+                <span class="field__check-indicator"></span>
+                <span class="field__check-text">У меня хороший английский</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="slider-block">
+          <h2>Уровень владения JavaScript</h2>
+          <div class="slider__range-wrapper">
+          <input type="text" class="slider__range" data-slider-handle="custom" data-slider-value="488">
+          </div>
+          <ul class="slider__list">
+            <li class="slider__segment" data-slider-value="-1.2">
+              <span class="slider__text">Не владею</span>
+            </li>
+            <li class="slider__segment" data-slider-value="18">
+              <span class="slider__text">Использую готовые решения</span>
+            </li>
+            <li class="slider__segment" data-slider-value="47">
+              <span class="slider__text"> Использую готовые решения и умею их переделывать</span>
+            </li>
+            <li class="slider__segment" data-slider-value="98.1">
+              <span class="slider__text">Пишу сложный JS с нуля</span>
+            </li>
+          </ul>
+        </div>
+        <div class="description-block">
+          <h2>Расскажите о себе словами</h2>
+          <p class="field__text">
+            Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR.
+            Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
+          </p>
+          <textarea class="description__textarea" onkeydown="autoGrowTextArea(this)" rows="3">Вакансия привлекла возможностью развития собственного потенциала в сильной команде. Ожидаю,что не ошиблась)</textarea>
+        </div>
+        <div class="field-group">
+          <h2>Какие у вас планы на будущее?</h2>
+          <p class="field__text">
+            Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
+          </p>
+          <div class="field__group-row field__group-row--radiobuttons-row">
+            <div class="field__radio-item" tabindex="0">
+              <input type="radio" class="field__radio-input" id="1" name="plans">
+              <label for="1" class="field__radio-label">
+                <span class="field__radio-button"></span>
+                Верстать
+              </label>
+            </div>
+            <div class="field__radio-item" tabindex="0">
+              <input type="radio" class="field__radio-input" id="2" name="plans">
+              <label for="2" class="field__radio-label">
+                <span class="field__radio-button"></span>
+                Прокачиваться в JS
+              </label>
+            </div>
+            <div class="field__radio-item" tabindex="0">
+              <input type="radio" class="field__radio-input" id="3" name="plans">
+              <label for="3" class="field__radio-label">
+                <span class="field__radio-button"></span>
+                Менеджерство
+              </label>
+            </div>
+            <div class="field__radio-item" tabindex="0">
+              <input type="radio" class="field__radio-input" id="4" name="plans">
+              <label for="4" class="field__radio-label">
+                <span class="field__radio-button"></span>
+                Другое
+              </label>
+            </div>
+          </div>
+
+        </div>
+        <div class="field-group">
+          <label class="field__label field__label--short">
+            <span class="field__label-text">Дата заполнения</span>
+            <input class="field__input" type="text" name="name" value="15.05.2019">
+          </label>
+        </div>
+      </form>
+    </section>
+  </div>
+</main>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.1/bootstrap-slider.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+

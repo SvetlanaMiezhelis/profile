@@ -1,0 +1,20 @@
+.profile__form{
+  width: 100%;
+}
+
+.profile__title{
+  width: 33.3333%;
+  margin: 0 auto;
+  margin-bottom: 35px;
+
+  @media (max-width: 425px) {
+    margin-bottom: 20px;
+  }
+
+
+  img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
