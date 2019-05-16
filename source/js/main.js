@@ -7,9 +7,5 @@ $(function () {
         selection:'none'
     });
 
-    autoGrowTextArea(document.querySelector('.description__textarea'));
+   autosize($('.description__textarea'));
 });
-
-function autoGrowTextArea(element) {
-    element.style.height = (element.scrollHeight) + "px";
-}
