@@ -4,21 +4,9 @@
   padding-bottom: 5px;
 }
 
-.slider__range-wrapper{
+.slider__range-wrapper {
   padding-top: 25px;
   padding-bottom: 15px;
-}
-
-.slider__range{
-  /*display: block;
-  height: 20px;
-  width: 100%;
-  position: relative;
-  background-image: url("../images/slider-line.png");
-  background-repeat: no-repeat;
-  background-position: -8px center;
-  background-size: 102%;
-  margin-bottom: 15px;*/
 }
 
 .slider__list {
@@ -34,7 +22,8 @@
   line-height: 1.5;
   position: relative;
 
-  &::before{
+
+  &::before {
     content: "";
     display: block;
     width: 3px;
@@ -45,32 +34,32 @@
     left: 0;
   }
 
-  &:first-child{
+  &:first-child {
     width: 19.4%;
 
-    &:before{
+    &:before {
       height: 20px;
     }
   }
 
-  &:nth-child(2){
+  &:nth-child(2) {
     width: 29.1%;
   }
 
-  &:nth-child(3){
+  &:nth-child(3) {
     width: 25.9%;
-    .slider__text{
+    .slider__text {
       max-width: 85%;
     }
   }
 
-  &:last-child{
+  &:last-child {
     width: 25.9%;
 
-    .slider__text{
+    .slider__text {
       text-align: right;
     }
-    &::before{
+    &::before {
       left: auto;
       right: 2px;
       height: 20px;
@@ -78,16 +67,14 @@
   }
 }
 
-.slider__text{
+.slider__text {
   display: block;
 }
 
 .slider-handle.custom {
   background: transparent none;
-  /* You can customize the handle and set a background image */
 }
 
-/* Or display content like unicode characters or fontawesome icons */
 .slider-handle.custom::before {
   position: absolute;
   top: -18px;

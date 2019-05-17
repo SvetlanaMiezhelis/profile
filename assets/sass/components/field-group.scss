@@ -3,7 +3,7 @@
   padding-bottom: 15px;
   margin-bottom: 10px;
 
-  &:last-child{
+  &:last-child {
     margin-top: 46px;
     margin-bottom: 40px;
   }
@@ -19,15 +19,15 @@
     flex-direction: column;
     align-items: flex-start;
 
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-bottom: 10px;
     }
   }
 
-  &--short{
+  &--short {
     max-width: 50%;
 
-    .field__input{
+    .field__input {
       background-position: 0px 25px;
       background-size: 100% 55%;
       flex: 0 0 auto;
@@ -83,7 +83,7 @@
 .field__text {
   margin: 0;
   margin-bottom: 11px;
-  font-size:inherit;
+  font-size: inherit;
   line-height: inherit;
 
   @media (max-width: 760px) {
@@ -98,11 +98,11 @@
   align-items: flex-start;
   flex-wrap: wrap;
 
-  &--checkboxes-row{
+  &--checkboxes-row {
     padding-top: 17px;
   }
 
-  &--radiobuttons-row{
+  &--radiobuttons-row {
     @media (max-width: 760px) {
       flex-direction: column;
     }
@@ -124,7 +124,7 @@
     }
   }
 
-  &:last-child{
+  &:last-child {
     padding-left: 15px;
     @media (max-width: 760px) {
       padding-left: 0;
@@ -183,30 +183,30 @@
   color: #000000;
 
   @media (max-width: 1000px) {
-   max-width: 80%;
+    max-width: 80%;
   }
 
-  a{
+  a {
     display: inline-block;
     color: $theme-color-link;
     text-decoration: none;
     position: relative;
 
-    &::after{
+    &::after {
       content: "";
       display: block;
       width: 100%;
       height: 1px;
-      background-color:$theme-color-link;;
+      background-color: $theme-color-link;;
       transition: all 0.3s;
       position: absolute;
       bottom: 0;
       left: 0;
     }
 
-    &:hover{
+    &:hover {
 
-      &::after{
+      &::after {
         background-color: transparent;
       }
 
@@ -271,11 +271,11 @@
   opacity: 1;
 }
 
-.field__input, .description__textarea ,.field__radio-item, .field__check-label{
-  &:focus{
-    outline: 2px solid rgba(62,35,28,0.3);
-    &::selection{
-      background-color: rgba(255,255,255,0.3);
+.field__input, .field__radio-item, .field__check-label {
+  &:focus {
+    outline: 2px solid rgba(62, 35, 28, 0.3);
+    &::selection {
+      background-color: rgba(255, 255, 255, 0.3);
     }
   }
 }

@@ -18,4 +18,7 @@
   overflow-y: hidden;
   margin-top: 14px;
   overflow-x: auto;
+  &:focus {
+    outline: 2px solid rgba(62, 35, 28, 0.3);
+  }
 }

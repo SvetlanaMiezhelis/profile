@@ -16,80 +16,80 @@ var include = require("posthtml-include");
 var runSequence = require("run-sequence");
 
 gulp.task("style", function () {
-  gulp.src("source/sass/style.scss")
+  gulp.src("assets/sass/style.scss")
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("dist/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("dist/css"))
     .pipe(server.stream());
 });
 
 gulp.task("scripts", function () {
-    return gulp.src("source/**/*.js")
-        .pipe(gulp.dest("build"));
+    return gulp.src("assets/**/*.js")
+        .pipe(gulp.dest("dist"));
 });
 
 gulp.task("serve", ["style"], function () {
   server.init({
-    server: "build/",
+    server: "dist/",
     notify: false,
     open: true,
     cors: true,
     ui: false
   });
 
-  gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("source/js/**/*.js", ["scripts", server.reload]);
-  gulp.watch("source/*.html", ["html", server.reload]);
+  gulp.watch("assets/sass/**/*.{scss,sass}", ["style"]);
+  gulp.watch("assets/js/**/*.js", ["scripts", server.reload]);
+  gulp.watch("assets/*.html", ["html", server.reload]);
 
 });
 
 gulp.task("images", function () {
-  return gulp.src("source/images/**/*.{png,jpg,svg}")
+  return gulp.src("assets/images/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("build/images"));
+    .pipe(gulp.dest("dist/images"));
 });
 
 gulp.task("sprite", function () {
-  return gulp.src("source/images/icon-*.svg")
+  return gulp.src("assets/images/icon-*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/images"));
+    .pipe(gulp.dest("dist/images"));
 });
 
 gulp.task("html", function () {
-  return gulp.src("source/*.html")
+  return gulp.src("assets/*.html")
     .pipe(posthtml([
       include()
     ]))
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("dist"));
 });
 
 gulp.task("copy", function () {
   return gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
-    "source/images/**",
-    "source/js/**",
-    "source/libs/**"
+    "assets/fonts/**/*.{woff,woff2}",
+    "assets/images/**",
+    "assets/js/**",
+    "assets/libs/**"
   ], {
-    base: "source"
+    base: "assets"
   })
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("dist"));
 });
 
 gulp.task("clean", function () {
-  return del("build");
+  return del("dist");
 });
 
 gulp.task("build", function (callback) {
